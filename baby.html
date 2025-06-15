@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To My Mussu..</title>
+
+
+
+    <style>
+        body{
+            background-color: pink;
+            font-family: Arial, sans-serif;
+        }
+        li{
+            list-style-type: none;
+            padding: 10px;
+            margin: 5px;
+            border: 0.5px solid rgb(56, 56, 56);
+            border-radius: 5px;
+            background-color: rgb(235, 115, 115);
+            color : white ;
+            text-align: center;
+        }
+
+
+        li:hover{
+            background-color: rgb(242, 171, 171);
+            color: white;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        button{
+            padding: 10px 20px;
+            background-color: #df2525;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        button:hover{
+            background-color: #c21f1f;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .hidden{
+            display : none ;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Assalam walaikum (first word that i texted you)</h1>
+        <ul>
+            <li><marquee>Starting with an Sorry becuase mujse hamesha ghalti hoti hai . SORRYYYYYYYYY😘</marquee></li>
+            <li>I can't express how happy I feel when I'm with you. Thanks for coming in my life</li>
+            <li>The most beautiful thing about you is your smile. I never told this but it's true.</li>
+            <li>Aur jab aap muje "mudasir" kar k bolate hona no words khud k naam se b pyaar ho jata hai muje</li>
+            <li>Baby Ik sometimes you think like , mai change hogaya hu but nahi baby bas baat karne ab mere pas kuch ziyada nai hai aur im comfortable isliye nakhre kartun(intentionally)😅</li>
+            <li>Pagli tuje ek baat samjhana chahtahu ki , pyaar mai mere tere nai hota , pyaar mai hamara hota hai </li>
+            <li>Teach me how to love and treat you , I will improve and do the same</li>
+        </ul>
+        <button onclick="showSecret()">Aur</button>
+        <p id="secret" class="hidden">I LOVE YOU MORE THAN ANYTHING MY BABE❤️</p>
+  </div>
+    <button><a href="next.html">Dusra page</a></button>
+  <script>
+    function showSecret() {
+      document.getElementById("secret").classList.remove("hidden");
+    }
+  </script>
+
+    </div>
+</body>
+</html>

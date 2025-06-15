@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Interactive Page</title>
+    <style>
+        body {
+            background-color: pink;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        
+        h1 {
+            border-right: 3px solid black;
+            white-space: nowrap;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+        
+        #trickyButton {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: rgb(235, 80, 80);
+            border: 2px solid black;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        #trickyButton:hover {
+            background-color: #f0f0f0;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="typingText"></h1>
+    <a href="baby.html"><button id="trickyButton">Click me</button></a>
+
+    <script>
+        // Typing animation for h1
+        const text = "Welcome Muskan meri jaanuuu 🎀";
+        const typingElement = document.getElementById('typingText');
+        let i = 0;
+        
+        function typeWriter() {
+            if (i < text.length) {
+                typingElement.innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 100);
+            } else {
+                typingElement.style.borderRight = 'none';
+            }
+        }
+        
+        // Start typing animation when page loads
+        window.onload = typeWriter;
+        
+        // Button that moves away on hover
+        const button = document.getElementById('trickyButton');
+        let hoverCount = 0;
+        
+        button.addEventListener('mouseover', () => {
+            hoverCount++;
+            
+            if (hoverCount <= 3) {
+                // Calculate random position within viewport
+                const maxX = window.innerWidth - button.offsetWidth;
+                const maxY = window.innerHeight - button.offsetHeight;
+                const randomX = Math.floor(Math.random() * maxX);
+                const randomY = Math.floor(Math.random() * maxY);
+                
+                // Move button to random position
+                button.style.position = 'absolute';
+                button.style.left = randomX + 'px';
+                button.style.top = randomY + 'px';
+                
+                // Update button text
+                if (hoverCount < 3) {
+                    button.textContent = `Naah`;
+                } else {
+                    button.textContent = "uh can click now";
+                }
+            }
+        });
+        
+        button.addEventListener('click', () => {
+            href = "index.html";
+            button.textContent = "You clicked me!";
+            
+        });
+    </script>
+</body>
+</html>

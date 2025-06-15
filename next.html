@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Our Journey ❤️</title>
+    <style>
+        /* WRITTEN BY [YOUR NAME] - NO AI! */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #faf3f0;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background: #ff6b6b;
+            top: 0;
+            bottom: 0;
+            left: 50px;
+        }
+        .memory {
+            position: relative;
+            margin-bottom: 40px;
+            padding-left: 80px;
+        }
+        .memory-date {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            background: #ff6b6b;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            padding : 10px ;
+            font-size: 16px;
+            text-align: center;
+        }
+        .memory-content {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        .memory img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .secret {
+            cursor: pointer;
+            color: #ff6b6b;
+            text-decoration: underline;
+        }
+        #hiddenMessage {
+            display: none;
+            margin-top: 20px;
+            padding: 10px;
+            background: #fff5f5;
+            border-radius: 5px;
+        }
+         button{
+            padding: 10px 20px;
+            background-color: #df2525;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin : 0 auto;
+            display: block;
+
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        button:hover{
+            background-color: #c21f1f;
+        }
+        h1 {
+            text-align: center;
+            color: #ff6b6b;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="timeline">
+        <h1 style="text-align: center; color: #ff6b6b;">Our Journey Together</h1>
+        
+        <!-- Memory 1: First Meet -->
+        <div class="memory">
+            <div class="memory-date">Day 1</div>
+            <div class="memory-content">
+                <h2>How it's really started.😘</h2>
+                <p>I still remember that day. I was really happy . muje pata tha ki mai aapko pata lunga😉😎 , I swear on you</p>
+                <img src="first_pic.jpeg" alt="Our first meet" width="300">
+            </div>
+        </div>
+
+        <div class="memory">
+            <div class="memory-date">We met</div>
+            <div class="memory-content">
+                <h2>Remember When...</h2>
+                <p>That time you are nervouse but listening me absorving my body language😎.we went to the park😁. we walked together for the first time🥺. we won the unno together😘 .   this show how lucky we are mostly me. 😊I’ll never forget it.</p>
+                <p>Can you remember that walk ? </p>
+            </div>
+            </div>
+        
+        <div class="memory">
+            <div class="memory-date">
+                Lovely Day
+            </div>
+            <div class="memory-content">
+                <h2>I proposed You🤭</h2>
+                <p>Actually it was stated with an jealousy issue. maine bola ki i like my DBMS teacher then you told aur kya pasand hai aapko mere jawab tha "TUM"</p>
+               <img src="propose.jpeg" alt="Proposal Moment" width="300">
+                <p class="secret" onclick="revealSecret()">click karo baby</p>
+                <div id="hiddenMessage">
+                    <p>Tab b same bolata ab b same  " I don't know why I Love you " but I Love you soooooooooooooooo muchhhhhhh. ❤️</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Memory 3: Inside Joke -->
+        <div class="memory">
+            <div class="memory-date">Ammul talks</div>
+            <div class="memory-content">
+                <h2>our First kiss</h2>
+                <p>Haan I agree our first kiss is on hands but what about Ammul?. aap ka muje miss karna and I was there within an hour we spent 2hours there i kissed you on your "kala" as you say we had to have HUG but I was the fool didn't consider but we had half hug that day😊🥰🥰 , remeber that forehead kiss ? O MY GOD real Sukoon .</p>
+            </div>
+        </div>
+
+        <div class="memory">
+            <div class="memory-date">Our Needz</div>
+            <div class="memory-content">
+                <h2>First lip kiss</h2>
+                <p> We were in shreyans for 3 hour na , we had long lip lock we both don't know how to kiss we tryed different kinds and at last we stick to now now we know how to kiss 😁🤭💕</p>
+            <img src="1.46.jpeg" alt="Proposal Moment" width="300">
+            </div>
+        </div>
+        <div class="memory">
+            <div class="memory-date">Our Needz</div>
+            <div class="memory-content">
+                <h2>First Hug</h2>
+                <p>I know how to hug , i learnt from my hommiees i like we know how to hug with women but that was my first hug ever with actaul woman and i'm very lucky and thankfull that is you🥰 , you does'nt know how to hug but you did that properly in second time that was really tight 💘</p>
+            </div>
+        </div>
+        
+        <h5>Aur b bahut hai , but this are the unforgettable things we carry out</h5>
+    </div>
+<button><a href="Lovedose.html">Dusra page</a></button>
+    <script>
+      
+        function revealSecret() {
+            const msg = document.getElementById("hiddenMessage");
+            if (msg.style.display === "none" || !msg.style.display) {
+                msg.style.display = "block";
+            } else {
+                msg.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

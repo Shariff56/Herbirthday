@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To My Mussu..</title>
+    <title>Happy 21st Birthday My Love! 🎀</title>
+    <style>
+        /* 100% HANDWRITTEN BY YOU - NO AI! */
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: #ffebee; /* Soft pink background */
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #a61bd8;
+            text-align: center;
+        }
+        
+        /* Birthday Container */
+        #birthday-box {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(216, 27, 96, 0.2);
+            max-width: 600px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        /* Age Counter */
+        #age-counter {
+            font-size: 80px;
+            font-weight: bold;
+            margin: 20px 0;
+            color: #c2185b;
+            position: relative;
+        }
+        h3{
+            font-style : oblique;
+            font-weight: 500;
+        }
+        /* Floating Hearts */
+        .heart {
+            position: absolute;
+            font-size: 24px;
+            color: #ff4081;
+            animation: float 6s ease-in-out infinite;
+            z-index: 1;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-80px) rotate(20deg); }
+        }
+        
+        /* Hidden Message */
+        #secret-message {
+            display: none;
+            margin-top: 30px;
+            padding: 20px;
+            background: #fce4ec;
+            border-radius: 10px;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Button */
+        #show-message {
+            background: #ff4081;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 18px;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+        #show-message:hover {
+            background: #d81b60;
+            transform: scale(1.1);
+        }
+        .big{
+            font-size: 100px;
+            margin: 20px 0;
+        }
+         button{
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #df2525;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin : 0 auto;
+            display: block;
+
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        button:hover{
+            background-color: #c21f1f;
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating Hearts Background -->
+    <div id="hearts-container"></div>
+    
+    <!-- Main Content -->
+    <div id="birthday-box">
+        <h1>Happy Birthday </h1>
+           <h3> Mere shona😘, My baby😍, Meri jaanu💓, My sugar🤍, My cutie💘, My sweety💕, My love💖, My darling👄, Meri zindagi🎀, Meri wify💕, Meri mussuu🥰</h3>
+       
+        
+        <div id="age-counter">0 </div>
+        
+        
+        <button id="show-message" onclick="showSecret()">Oye</button>
+        
+        <div id="secret-message">
+            <p>To the most amazing 21-year-old in the world...</p>
+            <p>I coded this just for you - no AI, just my heart speaking through code.😉</p>
+            <p>Happy birthday my love! 🎀</p>
+            <p>I will be there for you forever No matter what , sirf ek bar bola lena kabi b😉</p>
+            <p>I Love you baby😘</p>
+        </div>
+
+    
+    <button> <a href="https://www.youtube.com/watch?v=pIBoAh4OXhQ">Listen only if you have time </a> </button>
+
+    </div>
+    <script>
+
+        const heartsContainer = document.getElementById("hearts-container");
+        for (let i = 0; i < 30; i++) {
+            const heart = document.createElement("div");
+            heart.className = "heart";
+            heart.innerHTML = "❤️";
+            heart.style.left = `${Math.random() * 100}vw`;
+            heart.style.top = `${Math.random() * 100}vh`;
+            heart.style.fontSize = `${20 + Math.random() * 30}px`;
+            heart.style.animationDelay = `${Math.random() * 5}s`;
+            heartsContainer.appendChild(heart);
+        }
+        
+        // 2. Age counter animation (0 → 21)
+        let currentAge = 0;
+        const ageElement = document.getElementById("age-counter");
+        const ageInterval = setInterval(() => {
+            currentAge++;
+            ageElement.textContent = currentAge;
+            if (currentAge === 21) clearInterval(ageInterval);
+        }, 100);
+        
+        // 3. Show secret message
+        function showSecret() {
+            const message = document.getElementById("secret-message");
+            message.style.display = "block";
+            document.getElementById("show-message").style.display = "none";
+            
+            // Create falling hearts animation
+            for (let i = 0; i < 50; i++) {
+                setTimeout(() => {
+                    const heart = document.createElement("div");
+                    heart.innerHTML = "❤️";
+                    heart.style.position = "absolute";
+                    heart.style.fontSize = `${20 + Math.random() * 20}px`;
+                    heart.style.color = `hsl(${Math.random() * 360}, 100%, 70%)`;
+                    heart.style.left = `${Math.random() * 100}vw`;
+                    heart.style.top = "-50px";
+                    document.body.appendChild(heart);
+                    
+                    // Animate falling
+                    const duration = 3 + Math.random() * 2;
+                    heart.animate([
+                        { top: "-50px", opacity: 1 },
+                        { top: "100vh", opacity: 0 }
+                    ], {
+                        duration: duration * 1000,
+                        easing: "linear"
+                    });
+                    
+                    // Remove after animation
+                    setTimeout(() => heart.remove(), duration * 1000);
+                }, i * 200);
+            }
+        }
+    </script>
+</body>
+</html>
